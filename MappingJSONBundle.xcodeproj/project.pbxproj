@@ -12,6 +12,8 @@
 		52D72DC32BD89BBA00D3EB88 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 52D72DC22BD89BBA00D3EB88 /* Assets.xcassets */; };
 		52D72DC62BD89BBA00D3EB88 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 52D72DC52BD89BBA00D3EB88 /* Preview Assets.xcassets */; };
 		52D72DD12BD89CA800D3EB88 /* Colors.json in Resources */ = {isa = PBXBuildFile; fileRef = 52D72DD02BD89CA800D3EB88 /* Colors.json */; };
+		52D72DD52BD89D4E00D3EB88 /* ColorDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52D72DD42BD89D4E00D3EB88 /* ColorDataModel.swift */; };
+		52D72DD82BD8A11500D3EB88 /* ColorFromHexString.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52D72DD72BD8A11500D3EB88 /* ColorFromHexString.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -21,6 +23,8 @@
 		52D72DC22BD89BBA00D3EB88 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		52D72DC52BD89BBA00D3EB88 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		52D72DD02BD89CA800D3EB88 /* Colors.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Colors.json; sourceTree = "<group>"; };
+		52D72DD42BD89D4E00D3EB88 /* ColorDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorDataModel.swift; sourceTree = "<group>"; };
+		52D72DD72BD8A11500D3EB88 /* ColorFromHexString.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorFromHexString.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,6 +57,8 @@
 		52D72DBD2BD89BB900D3EB88 /* MappingJSONBundle */ = {
 			isa = PBXGroup;
 			children = (
+				52D72DD62BD8A0F200D3EB88 /* Utility */,
+				52D72DD22BD89D2100D3EB88 /* Model */,
 				52D72DCD2BD89BEB00D3EB88 /* App */,
 				52D72DCC2BD89BD400D3EB88 /* View */,
 				52D72DCE2BD89BF200D3EB88 /* Resources */,
@@ -100,6 +106,22 @@
 				52D72DD02BD89CA800D3EB88 /* Colors.json */,
 			);
 			path = Data;
+			sourceTree = "<group>";
+		};
+		52D72DD22BD89D2100D3EB88 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				52D72DD42BD89D4E00D3EB88 /* ColorDataModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		52D72DD62BD8A0F200D3EB88 /* Utility */ = {
+			isa = PBXGroup;
+			children = (
+				52D72DD72BD8A11500D3EB88 /* ColorFromHexString.swift */,
+			);
+			path = Utility;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -174,6 +196,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				52D72DC12BD89BB900D3EB88 /* ContentView.swift in Sources */,
+				52D72DD82BD8A11500D3EB88 /* ColorFromHexString.swift in Sources */,
+				52D72DD52BD89D4E00D3EB88 /* ColorDataModel.swift in Sources */,
 				52D72DBF2BD89BB900D3EB88 /* MappingJSONBundleApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
