@@ -33,9 +33,8 @@ func colorFromHexString(_ hex: String) -> Color {
     // Scanner(string: String(redColor)).scanHexInt64(&redInt)
     // Scanner(string: String(greenColor)).scanHexInt64(&greenInt)
     // Scanner(string: String(blueColor)).scanHexInt64(&blueInt)
-    guard let r = UInt64(redColor, radix: 16), let g = UInt64(greenColor, radix: 16), let b = UInt64(blueColor, radix: 16) else {
-        return Color(red: 0, green: 0, blue: 0) // return default color black
-    }
+    
+    guard let r = UInt64(redColor, radix: 16), let g = UInt64(greenColor, radix: 16), let b = UInt64(blueColor, radix: 16) else { return Color(red: 0, green: 0, blue: 0) } // return default color black 
     
     // konversi ke CGFloat dan bagi dengan 255 untuk mendapatkan nilai dari 0 hingga 1
     // let redCGFloat = CGFloat(redInt) / 255.0
@@ -43,7 +42,7 @@ func colorFromHexString(_ hex: String) -> Color {
     // let blueCGFloat = CGFloat(blueInt) / 255.0
     // let results = Color(red: redCGFloat, green: greenCGFloat, blue: blueCGFloat)
     
-    let results = Color(red: Double(r), green: Double(g), blue: Double(b) / 255)
+    let results = Color(red: Double(r) / 255, green: Double(g) / 255, blue: Double(b) / 255)
     
     return results
 }
