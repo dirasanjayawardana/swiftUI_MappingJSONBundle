@@ -26,10 +26,13 @@ struct ColorDataModel: Codable, Identifiable {
 }
 
 
-// mock data
+// Bundle data json, decode json ke model
 extension ColorDataModel {
     static func loadColorData() -> [ColorDataModel] {
-        guard let url = Bundle.main.url(forResource: "Colors", withExtension: "json"), let data = try? Data(contentsOf: url) else { fatalError("Failed to load data JSON Data form bundle") }
+        guard 
+            let url = Bundle.main.url(forResource: "Colors", withExtension: "json"),
+            let data = try? Data(contentsOf: url)
+        else { fatalError("Failed to load data JSON Data form bundle") }
         
         do {
             let decodedColor = try JSONDecoder().decode([ColorDataModel].self, from: data)
